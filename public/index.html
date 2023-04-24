@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Snake</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+    <link rel="stylesheet" type="text/css" href="index.css">
+  </head>
+  
+  <body>
+    <div id="instructions">
+      <h2>How To Play</h2>
+      <p>Use your keyboard or swipe (mobile) to control the green snake. </p>
+      <p>Collect the red apples to grow your snake.</p>
+      <p>Avoid running into yourself and the walls!</p>
+      <form id="username-form">
+        <label for="username-input" id="username-label" style="display: none">Username</label>
+        <input id="username-input" type="text" placeholder="Username" />
+        <input type="submit" value="Play!"/>
+      </form>
+      <h2>Your High Scores</h2>
+      <ul id="highscores-list"></ul>
+    </div>
+    <div id="game">
+      <header>
+        <h1 id="score">Score: 0</h1>
+      </header>
+      <div id='board'></div>
+    </div>
+  </body>
+  
+  <script src="./game/constants.js" type="module" defer></script>
+  <script src="./game/utils.js" type="module" defer></script>
+  <script src="./game/Apple.js" type="module" defer></script>
+  <script src="./game/Snake.js" type="module" defer></script>
+  <script src="./game/Game.js" type="module" defer></script>
+  <script src="./game/Controller.js" type="module" defer></script>
+  <script src="./index.js" type="module" defer></script>
+
+</html>
