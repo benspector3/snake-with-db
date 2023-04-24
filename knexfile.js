@@ -1,6 +1,6 @@
 // Update with your config settings.
 const path = require('path');
-const config = require('./config.js');
+require('dotenv').config();
 
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
@@ -11,10 +11,10 @@ module.exports = {
     client: 'pg',
     connection: {
       database: 'snake',
-      user: config.user,
-      password: config.password,
-      host: 'localhost',
-      port: 5432,
+      user: process.env.PG_USER || 'postgres',
+      password: process.env.PG_PASSWORD || 'postgres',
+      host: process.env.HOST || 'localhost',
+      port: process.env.PG_PORT || 5432,
     },
     migrations: {
       directory: path.join(__dirname, 'src', 'db', 'migrations')
